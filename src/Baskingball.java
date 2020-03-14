@@ -7,15 +7,15 @@ class Baskingball extends Filler {
 
     @Override
     public void create() {
-        x = WIDTH/2;
-        y = HEIGHT/2;
+        x = WIDTH / 2;
+        y = HEIGHT / 2;
     }
 
     @Override
     public void draw() {
         fill(Color.red);
         g.fillRect(x,y,100,100);
-
+        //System.out.println(x + "     " + y);
     }
 
     @Override
