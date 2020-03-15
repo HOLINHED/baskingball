@@ -1,9 +1,5 @@
 public class Vec2d {
 
-    public static final double gravity = 0.04;
-    public static final double falloff = 0.6;
-    public static final double friction = 0.99;
-
     private double x;
     private double y;
 
@@ -40,6 +36,14 @@ public class Vec2d {
 
     public void setX(double x) {
         this.x = x;
+    }
+
+    public void mulX(double m) {
+        x *= m;
+    }
+
+    public void mulY(double m) {
+        y *= m;
     }
 
     public void set(Vec2d o) {

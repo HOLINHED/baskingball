@@ -103,7 +103,9 @@ public abstract class Filler implements KeyListener, MouseListener {
             public void paintComponent(Graphics c) {
                 super.paintComponent(c);
                 g = c;
-                draw();
+                try {
+                    draw();
+                } catch (Exception e) { }
             }
         };
 

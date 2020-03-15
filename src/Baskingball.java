@@ -2,20 +2,21 @@ import java.awt.*;
 
 class Baskingball extends Filler {
 
-    int x;
-    int y;
+    Ball ball;
+    Player player;
 
     @Override
     public void create() {
-        x = WIDTH / 2;
-        y = HEIGHT / 2;
+        ball = new Ball();
+        Player player = new Player();
     }
 
     @Override
     public void draw() {
-        fill(Color.red);
-        g.fillRect(x,y,100,100);
-        //System.out.println(x + "     " + y);
+        ball.draw(g);
+        player.draw(g);
+
+
     }
 
     @Override
