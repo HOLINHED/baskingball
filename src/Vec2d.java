@@ -22,6 +22,21 @@ public class Vec2d {
         this.y += o.getY();
     }
 
+    public void sub(Vec2d o) {
+        this.x -= o.getX();
+        this.y -= o.getY();
+    }
+
+    public void mul(Vec2d o) {
+        this.x *= o.getX();
+        this.y *= o.getY();
+    }
+
+    public void div(Vec2d o) {
+        this.x /= o.getX();
+        this.y /= o.getY();
+    }
+
     public void invertX() {
         x *= -1;
     }

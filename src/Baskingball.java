@@ -1,5 +1,3 @@
-import java.awt.*;
-
 class Baskingball extends Filler {
 
     Ball ball;
@@ -8,7 +6,7 @@ class Baskingball extends Filler {
     @Override
     public void create() {
         ball = new Ball();
-        Player player = new Player();
+        player = new Player();
     }
 
     @Override
@@ -16,7 +14,25 @@ class Baskingball extends Filler {
         ball.draw(g);
         player.draw(g);
 
+        movements();
 
+    }
+
+    public void movements() {
+        if (isKeyPressed(Key.ARROWLEFT)) {
+            player.move(-1);
+        } else if (isKeyPressed(Key.ARROWRIGHT)) {
+            player.move(1);
+        } else {
+            player.move(0);
+        }
+    }
+
+    @Override
+    public void keyPressed() {
+        if (key == 32) {
+            player.jump();
+        }
     }
 
     @Override

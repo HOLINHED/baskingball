@@ -157,8 +157,9 @@ public abstract class Filler implements KeyListener, MouseListener {
         if (!keys.contains(e.getKeyCode())) {
             key = e.getKeyCode();
             keys.add(e.getKeyCode());
+            keyPressed();
         }
-        keyPressed();
+
     }
 
     public void keyPressed() { }
